@@ -1,10 +1,12 @@
-DOC=pandoc
-FLAGS=-tmarkdown
-SOURCES=*.md
-OUTPUT=../README.md
+all: README.md complit
 
+README.md: $(wildcard *.md)
+	@cat $^ > ../$@
 
-all: pandoc
+complit:
+	@echo "`tput setaf 2`COMPLETED!`tput sgr0`\n"
 
-pandoc:
-	@$(DOC) $(FLAGS) $(SOURCES) > $(OUTPUT)
+.PHONY: clean complit
+
+clean:
+	rm -f ../README.md

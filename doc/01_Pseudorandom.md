@@ -34,6 +34,10 @@
 
 ## Blum Blum Shub
 
+### Введение
+
+### Blum Blum Инициализация
+
 ## Lagged Fibonacci generator
 
 ## Linear congruential generator

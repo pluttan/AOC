@@ -1,13 +1,13 @@
 CC=gcc
 CFLAGS=-Wno-asm-operand-widths
-SOURCES=tryio
+SOURCES=acorn
 LIBDIR=-Ibin/
-LIBS=../out.c
+LIBS=../../io/out.c ../../mem/al.c
 
 all: compfile runfile complit
 
 compfile:
-	@$(CC) $(SOURCES).c $(LIBS) $(CFLAGS) -o $(SOURCES)
+	@$(CC) $(LIBS) $(SOURCES).c $(CFLAGS) -o $(SOURCES)
 
 runfile:
 	@./$(SOURCES)

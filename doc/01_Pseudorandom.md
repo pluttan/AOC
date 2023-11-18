@@ -20,7 +20,6 @@
 
 1. \(Y_{0n} = Y_{0n-1}\) для \(n \geq 1\).
 2. \(Y_{mn} = [Y_{m-1n} + Y\_{mn-1}] \mod M\) для \(n \geq 1, m = 1, \ldots, k\).
-3. \(Y_{kn} = Y_{kn} / M\) для \(n \geq 1\).
 
 \[ Y = \begin{bmatrix} Y_{00} & Y_{10} & Y_{20} & \ldots & Y_{(k-1)0} \\ Y_{01} & Y_{11} & Y_{21} & \ldots & Y_{(k-1)1} \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ Y_{0n} & Y_{1n} & Y_{2n} & \ldots & Y_{(k-1)n} \end{bmatrix} \]
 

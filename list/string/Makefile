@@ -1,8 +1,7 @@
 CC=gcc
 CFLAGS=-Wno-asm-operand-widths
-SOURCES=tryio
-LIBDIR=-Ibin/
-LIBS=../out.c
+SOURCES=string
+LIBS=../../io/out.c  ../../mem/al.c
 
 all: compfile runfile complit
 

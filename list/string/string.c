@@ -160,6 +160,10 @@ str sfloatR(double fnumber, int afterPoint)
 {
     if (afterPoint > 14)
         return sida("afterPoint is bigger then 14");
+
+    if (fnumber == 0)
+        return sida("0.0");
+
     int isNegative = 0;
     str st = sInit();
 

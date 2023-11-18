@@ -35,7 +35,7 @@ float acorn()
             Y[i][j] = (Y[i - 1][j] + Y[i][j - 1]) % M;
         }
     }
-    fprint(Y[k - 1][k - 1] / M);
+    // fprint(Y[k - 1][k - 1] / M);
     return Y[k - 1][k - 1] / M;
 }
 
@@ -47,8 +47,6 @@ int main()
     float out = acorn();
     if (out == 0)
         print("ok!");
-    // str s = sfloat(acorn() * 1000);
-    // sprint(s);
-    // sdi(s);
+
     return 0;
 }

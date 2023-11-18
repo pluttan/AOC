@@ -1,5 +1,7 @@
 #include "../../io/out.h"
 #include "../../mem/al.h"
+#include "../../math/math.h"
+#include "../../list/string/string.h"
 
 float acorn()
 {
@@ -16,10 +18,11 @@ float acorn()
                                  78906399143};
     int iPowM = 60;
 
-    unsigned long long M = 0;
-    for (int _ = 0; _ < iPowM; _++)
-        M += 2 * M;
+    unsigned long long M = pow(2, iPowM);
     unsigned long long Y[k][k];
+
+    iprint(M);
+
     for (int i = 0; i < k; i++)
     {
         Y[0][i] = Y0n[i];
@@ -32,6 +35,7 @@ float acorn()
             Y[i][j] = (Y[i - 1][j] + Y[i][j - 1]) % M;
         }
     }
+    fprint(Y[k - 1][k - 1] / M);
     return Y[k - 1][k - 1] / M;
 }
 
@@ -40,7 +44,11 @@ int main()
     int *a = (int *)malloc(sizeof(int));
     *a = 69;
     free(a);
-    acorn() * 1000;
-    print("l");
+    float out = acorn();
+    if (out == 0)
+        print("ok!");
+    // str s = sfloat(acorn() * 1000);
+    // sprint(s);
+    // sdi(s);
     return 0;
 }

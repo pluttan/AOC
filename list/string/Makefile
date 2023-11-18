@@ -1,7 +1,7 @@
 CC=gcc
-CFLAGS=-Wno-asm-operand-widths
+CFLAGS=-Wno-asm-operand-widths -Wno-incompatible-library-redeclaration
 SOURCES=string
-LIBS=../../io/out.c  ../../mem/al.c
+LIBS=../../io/out.c  ../../mem/al.c ../../math/math.c
 
 all: compfile runfile complit
 

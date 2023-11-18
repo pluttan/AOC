@@ -22,10 +22,10 @@
 2. $Y_{mn} = [Y_{m-1n} + Y\_{mn-1}] \mod M$ для $n \geq 1, m = 1, \ldots, k$.
 <!-- 3. $Y_{kn} = Y_{kn} / M$ для $n \geq 1$. -->
 
-$ Y = \begin{bmatrix} Y_{00} & Y_{10} & Y_{20} & \ldots & Y_{(k-1)0} \\ Y_{01} & Y_{11} & Y_{21} & \ldots & Y_{(k-1)1} \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ Y_{0n} & Y_{1n} & Y_{2n} & \ldots & Y_{(k-1)n} \end{bmatrix} $
+$Y = \begin{bmatrix} Y_{00} & Y_{10} & Y_{20} & \ldots & Y_{(k-1)0} \\ Y_{01} & Y_{11} & Y_{21} & \ldots & Y_{(k-1)1} \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ Y_{0n} & Y_{1n} & Y_{2n} & \ldots & Y_{(k-1)n} \end{bmatrix}$
 
 Где каждый элемент $Y_{mn}$ вычисляется по формуле:
-$ Y_{mn} = \begin{cases} Y_{0(n-1)}, & \text{если } m = 0 \\ (Y_{(m-1)n} + Y_{mn-1}) \mod M, & \text{если } n \geq 1 \text{ и } m = 1, \ldots, k \end{cases} $
+$Y_{mn} = \begin{cases} Y_{0(n-1)}, & \text{если } m = 0 \\ (Y_{(m-1)n} + Y_{mn-1}) \mod M, & \text{если } n \geq 1 \text{ и } m = 1, \ldots, k \end{cases}$
 
 ### ACORN Инициализация
 

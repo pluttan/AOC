@@ -46,19 +46,22 @@ str sint(long long number);
 
 // Function to convert a floating-point number to a string
 // with a specified number of digits after the decimal point
-str sfloatR(double fnumber, int afterPoint);
+str sfloatR(long double fnumber, int afterPoint);
 
 // Function to convert a floating-point number to a string
 // with a default precision of 14 digits after the decimal point
-str sfloat(double fnumber);
+str sfloat(long double fnumber);
 
 // Function to print integer
 void iprint(long long i);
 
 // Function to print float
-void fprint(double i);
+void fprint(long double i);
 
 // Function to print string and delete
 void sprintd(str head);
+
+// Function to print float with number of digits
+void fprintR(long double i, int r);
 
 #endif /* STRING_UTILS_H */

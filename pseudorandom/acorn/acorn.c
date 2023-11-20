@@ -3,25 +3,10 @@
 #include "../../math/math.h"
 #include "../../list/string/string.h"
 
-float acorn()
+float acorn(const int k, unsigned long long *Y0n, int iPowM)
 {
-    const int k = 10;
-    unsigned long long Y0n[k] = {23309269401,
-                                 72132616601,
-                                 83117915661,
-                                 90696974041,
-                                 20930630369,
-                                 61993153921,
-                                 59258624043,
-                                 35225911873,
-                                 51161400979,
-                                 78906399143};
-    int iPowM = 60;
-
     unsigned long long M = pow(2, iPowM);
     unsigned long long Y[k][k];
-
-    iprint(M);
 
     for (int i = 0; i < k; i++)
     {
@@ -35,8 +20,12 @@ float acorn()
             Y[i][j] = (Y[i - 1][j] + Y[i][j - 1]) % M;
         }
     }
-    // fprint(Y[k - 1][k - 1] / M);
-    return Y[k - 1][k - 1] / M;
+    iprint(Y[k - 1][k - 1]);
+    print("\n");
+    long double res = (long double)Y[k - 1][k - 1] / (long double)M;
+    fprintR(res, 5);
+    print("\n");
+    return (long double)Y[k - 1][k - 1] / M;
 }
 
 int main()
@@ -44,9 +33,18 @@ int main()
     int *a = (int *)malloc(sizeof(int));
     *a = 69;
     free(a);
-    float out = acorn();
-    if (out == 0)
-        print("ok!");
-
+    const int k = 2000;
+    unsigned long long Y0n[k] = {8333461453744879,
+                                 6841363015229961,
+                                 10240774981256487,
+                                 11468173872453257,
+                                 7228610224952711,
+                                 8435007367160269,
+                                 8834103693589409,
+                                 10503658288156691,
+                                 6230685553014661,
+                                 11153156816412731};
+    float out = acorn(k, Y0n, 50);
+    fprint(out);
     return 0;
 }

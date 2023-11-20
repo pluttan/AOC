@@ -1,11 +1,11 @@
 CC=gcc
 CFLAGS=-Wno-asm-operand-widths -Wno-incompatible-library-redeclaration -Ofast
-SOURCES=acorn
+SOURCES=lint
 LIBDIR=-Ibin/
 LIBS=../../io/out.c \
 	 ../../mem/al.c \
-	 ../../list/string/string.c \
-	 ../../math/math.c
+	 ../../math/math.c \
+	 ../string/string.c
 LEAKSLOG=leaks.log
 
 # Define color codes

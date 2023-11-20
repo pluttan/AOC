@@ -1,0 +1,27 @@
+563848997742208
+0.50079
+0.5Process:         acorn [78240]
+Path:            /Users/USER/Desktop/*/acorn
+Load Address:    0x1028fc000
+Identifier:      acorn
+Version:         0
+Code Type:       ARM64
+Platform:        macOS
+Parent Process:  leaks [78239]
+
+Date/Time:       2023-11-19 10:31:23.776 +0300
+Launch Time:     2023-11-19 10:31:23.443 +0300
+OS Version:      macOS 13.0 (22A380)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 14.1 (14B47b)
+
+Physical footprint:         33.3M
+Physical footprint (peak):  33.3M
+Idle exit: untracked
+----
+
+leaks Report Version: 4.0, multi-line stacks
+Process 78240: 220 nodes malloced for 13 KB
+Process 78240: 0 leaks for 0 total leaked bytes.
+

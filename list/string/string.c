@@ -156,7 +156,7 @@ str sint(long long number)
     return st;
 }
 
-str sfloatR(double fnumber, int afterPoint)
+str sfloatR(long double fnumber, int afterPoint)
 {
     if (afterPoint > 14)
         return sida("afterPoint is bigger then 14");
@@ -195,6 +195,11 @@ str sfloatR(double fnumber, int afterPoint)
         number /= 10;
     };
     st = saddH(st, '0' + nowNumber);
+    if (afterPoint >= 0)
+    {
+        st = saddH(st, '.');
+        st = saddH(st, '0');
+    }
 
     if (isNegative)
     {
@@ -204,7 +209,7 @@ str sfloatR(double fnumber, int afterPoint)
     return st;
 }
 
-str sfloat(double fnumber)
+str sfloat(long double fnumber)
 {
     return sfloatR(fnumber, 3);
 }
@@ -214,7 +219,12 @@ void iprint(long long i)
     sprintd(sint(i));
 }
 
-void fprint(double i)
+void fprint(long double i)
 {
     sprintd(sfloat(i));
+}
+
+void fprintR(long double i, int r)
+{
+    sprintd(sfloatR(i, r));
 }
